@@ -8,12 +8,14 @@ function useName(event) {
 function appendNumberToNumberList() {
     // when i want to click the write random number button
     // a random number should appear.
-    const Bannana = Math.random()* 10
-    const floored = Math.floor(Bannana) 
+    const double = Math.random()* 10
+    const floored = Math.floor(double) 
     const randomNumber = floored +1
-    alert(randomNumber)
-    
+    const newListItem = document.createElement("li");
+    newListItem.textContent = `Random Number: ${randomNumber}`;
+    const numberedList = document.getElementById("numbered-list");
+    numberedList.appendChild(newListItem);
 }
-
 // Get the random number to come under the number list section.
+
 
