@@ -25,8 +25,6 @@ function appendNumberToNumberList() {
         const numberText = splitText[lastIndex].trim();
         const numberValue = parseInt(numberText);
         currentSum += numberValue;
-
-        console.log({currentSum,numberValue})
     }
 
 
