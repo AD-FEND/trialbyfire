@@ -1,0 +1,16 @@
+h1{
+    color: red;
+    
+}
+
+.button-top-spacing{
+    margin-top: 24px;
+}
+
+body{
+    background-color: blanchedalmond;
+}
+
+#total-amount {
+    font-weight: 700;
+}
