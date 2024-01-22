@@ -35,3 +35,22 @@ function appendNumberToNumberList() {
 // Get the random number to come under the number list section.
 
 
+
+document.getElementById('blogForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the form from calling the server
+
+    // Get values from the form
+    const title = document.getElementById('title').value;
+    const content = document.getElementById('content').value;
+
+    // Create a new blog article element
+    const articleElement = document.createElement('article');
+    articleElement.innerHTML = '<h2>' + title + '</h2><p>' + content + '</p>';
+
+    // Append the new blog article to the blog section
+    document.getElementById('blog-section').appendChild(articleElement);
+
+    // Clear the form fields
+    document.getElementById('title').value = '';
+    document.getElementById('content').value = '';
+});
