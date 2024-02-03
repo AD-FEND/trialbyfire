@@ -17,17 +17,7 @@ function appendNumberToNumberList() {
     numberedList.appendChild(newListItem);
 
     // Update the total.
-    let currentSum = 0
-    const listItems = document.querySelectorAll("#numbered-list li")
-    for (let i = 0; i < listItems.length; i++) {
-        const splitText = listItems[i].textContent.split(":")
-        const lastIndex = splitText.length-1;
-        const numberText = splitText[lastIndex].trim();
-        const numberValue = parseInt(numberText);
-        currentSum += numberValue;
-    }
-
-
+    const currentSum = sumOfNumberedList()
     const elTotalAmountParagraph = document.querySelector("#total-amount");
     elTotalAmountParagraph.textContent = `Total Amount: ${currentSum}`;
 
@@ -54,3 +44,21 @@ document.getElementById('blogForm').addEventListener('submit', function(event) {
     document.getElementById('title').value = '';
     document.getElementById('content').value = '';
 });
+
+
+
+// Update the total.
+
+function sumOfNumberedList() {
+    let currentSum = 0
+    const listItems = document.querySelectorAll("#numbered-list li")
+    for (let i = 0; i < listItems.length; i++) {
+        const splitText = listItems[i].textContent.split(":")
+        const lastIndex = splitText.length-1;
+        const numberText = splitText[lastIndex].trim();
+        const numberValue = parseInt(numberText);
+        currentSum += numberValue;
+        
+    }
+    return  currentSum;
+}
