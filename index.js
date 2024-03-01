@@ -62,3 +62,13 @@ function sumOfNumberedList() {
     }
     return  currentSum;
 }
+
+
+// Add new button to change the background of the page to a random colour
+
+function changeBackgroundColor(){
+    const body = document.querySelector('#change-color')
+    body.style.backgroundColor = 'red';
+}
+
+// Add a delete button on every blog article, when you click the delete button the specific related article will delete.
