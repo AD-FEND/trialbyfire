@@ -68,7 +68,18 @@ function sumOfNumberedList() {
 
 function changeBackgroundColor(){
     const body = document.querySelector('#change-color')
-    body.style.backgroundColor = 'red';
+    body.style.backgroundColor = getRandomColor();
+
 }
+
+// Function to generate a random color in RGB format
+function getRandomColor() {
+    var r = Math.floor(Math.random() * 256); // Random value between 0 and 255 for red
+    var g = Math.floor(Math.random() * 256); // Random value between 0 and 255 for green
+    var b = Math.floor(Math.random() * 256); // Random value between 0 and 255 for blue
+    return 'rgb(' + r + ',' + g + ',' + b + ')'; // Return the RGB color in string format
+}
+
+
 
 // Add a delete button on every blog article, when you click the delete button the specific related article will delete.
