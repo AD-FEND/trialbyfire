@@ -83,3 +83,34 @@ function getRandomColor() {
 
 
 // Add a delete button on every blog article, when you click the delete button the specific related article will delete.
+
+function deleteArticle(){
+     
+}
+
+function createArticle(){
+     const titleInput = document.getElementById("title").value;
+     const contentInput = document.getElementById("content").value;
+
+     const article = document.createElement("article");
+     article.classList.add("article");
+
+     const title = document.createElement("h2");
+     title.textContent = titleInput;
+
+     const content = document.createElement("p");
+     content.textContent = contentInput;
+
+     const deleteButton = document.createElement("button");
+     deleteButton.textContent = "Delete";
+     deleteButton. addEventListener("click", function(){
+        article.remove();
+     });
+
+     article.appendChild(title);
+     article.appendChild(content);
+     article.appendChild(deleteButton);
+
+     const articlesContainer = document.getElementById("blog-section");
+     articlesContainer.appendChild(article)
+}
